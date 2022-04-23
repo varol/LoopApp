@@ -5,6 +5,7 @@
 //  Created by Varol Aksoy on 19.04.2022.
 //
 
+import Hero
 import UIKit
 
 @main
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let navController = UINavigationController()
         let viewController = SplashRouter.setupModule(navigationController: navController)
+        viewController.hero.isEnabled = true
         navController.viewControllers = [viewController]
         window.rootViewController = navController
         window.makeKeyAndVisible()

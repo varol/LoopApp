@@ -12,5 +12,4 @@ class BaseViewController: UIViewController, LoadingShowable {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
