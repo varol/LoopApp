@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol DetailRouterInterface: class {
+protocol DetailRouterInterface: AnyObject {
     func navigate(_ route: DetailRoutes)
 }
 
@@ -20,13 +20,14 @@ class DetailRouter: NSObject {
     weak var presenter: DetailPresenterInterface?
     weak var viewController: DetailViewController?
     
-    static func setupModule() -> DetailViewController {
+    static func setupModule(product: Product) -> DetailViewController {
         let vc = DetailViewController()
         let interactor = DetailInteractor()
         let router = DetailRouter()
         let presenter = DetailPresenter(interactor: interactor,
-        router: router,
-        view: vc)
+                                        router: router,
+                                        view: vc,
+                                        product: product)
 
         vc.presenter = presenter
         router.presenter = presenter

@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol DetailInteractorInterface: class {
+protocol DetailInteractorInterface: AnyObject {
 
 }
 
-protocol DetailInteractorOutputInterface: class {
+protocol DetailInteractorOutputInterface: AnyObject {
 
 }
 

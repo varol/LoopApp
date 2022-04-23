@@ -5,13 +5,19 @@
 //  Created by Varol Aksoy on 22.04.2022.
 //
 
+import Kingfisher
 import UIKit
 
-class SliderCollectionViewCell: UICollectionViewCell {
+final class SliderCollectionViewCell: BaseCollectionViewCell {
+
+    @IBOutlet weak var productImageView: BaseImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
+    func configure(with imageURL: String) {
+        let url = URL(string: imageURL)
+        productImageView.kf.setImage(with: url)
+    }
 }

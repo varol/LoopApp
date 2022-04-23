@@ -41,6 +41,9 @@ extension SplashRouter: SplashRouterInterface {
         case .home:
             guard let navigationController = navigationController else { return }
             let homeVC = HomeRouter.setupModule(navigationController: navigationController)
+            homeVC.hero.isEnabled = true
+            navigationController.hero.isEnabled = true
+            navigationController.heroNavigationAnimationType = .none
             navigationController.setRootViewController(homeVC, animated: false)
         }
     }

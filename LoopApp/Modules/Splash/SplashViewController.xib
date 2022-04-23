@@ -4,12 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="BaseVIPER" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="LoopApp" customModuleProvider="target">
             <connections>
+                <outlet property="logoImageView" destination="KG0-NQ-n1X" id="Eop-0i-HlC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +17,29 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KG0-NQ-n1X" customClass="BaseImageView" customModule="LoopApp" customModuleProvider="target">
+                    <rect key="frame" x="40" y="388" width="334" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="bld-9L-xIw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="logoImage"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KG0-NQ-n1X" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GRf-yD-SSd"/>
+                <constraint firstItem="KG0-NQ-n1X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bFI-8X-gq6"/>
+                <constraint firstItem="KG0-NQ-n1X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="fPz-me-tTB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KG0-NQ-n1X" secondAttribute="trailing" constant="40" id="vHq-Wo-deg"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="114"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="logo" width="257" height="120"/>
     </resources>
 </document>

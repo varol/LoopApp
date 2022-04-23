@@ -1,21 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="LoopApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="286"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="340" height="286"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpq-HL-hvY" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                        <rect key="frame" x="16" y="16" width="308" height="254"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CNO-wy-4E6" customClass="BaseImageView" customModule="LoopApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="308" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="k0p-5N-GBX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zJY-ow-Xzu">
+                                <rect key="frame" x="0.0" y="150" width="308" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="varol" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flb-1F-3cb" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tYF-8v-7m5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aksoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-gT-zaK" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="308" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6L5-S6-wQ1" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54.5" width="308" height="15.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLE-1W-tco" customClass="BaseButton" customModule="LoopApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75" width="308" height="30"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ugh-ng-CiJ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ADD BASKET">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addBasketButtonTapped" destination="gTV-IL-0wX" eventType="touchUpInside" id="cwS-1L-Hho"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zJY-ow-Xzu" secondAttribute="bottom" priority="750" id="MxT-6W-iJV"/>
+                            <constraint firstAttribute="trailing" secondItem="CNO-wy-4E6" secondAttribute="trailing" id="Vxx-O3-OfT"/>
+                            <constraint firstItem="CNO-wy-4E6" firstAttribute="leading" secondItem="bpq-HL-hvY" secondAttribute="leading" id="XyX-am-yJ8"/>
+                            <constraint firstItem="CNO-wy-4E6" firstAttribute="top" secondItem="bpq-HL-hvY" secondAttribute="top" id="cSJ-Sx-d2R"/>
+                            <constraint firstItem="zJY-ow-Xzu" firstAttribute="top" secondItem="CNO-wy-4E6" secondAttribute="bottom" id="rsj-5t-YGG"/>
+                            <constraint firstItem="zJY-ow-Xzu" firstAttribute="leading" secondItem="bpq-HL-hvY" secondAttribute="leading" id="uyg-Sx-8ha"/>
+                            <constraint firstAttribute="trailing" secondItem="zJY-ow-Xzu" secondAttribute="trailing" id="zDQ-yE-pno"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="bpq-HL-hvY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Hat-zD-sc2"/>
+                <constraint firstAttribute="bottom" secondItem="bpq-HL-hvY" secondAttribute="bottom" constant="16" id="Idu-uf-OOA"/>
+                <constraint firstAttribute="trailing" secondItem="bpq-HL-hvY" secondAttribute="trailing" constant="16" id="TDB-dt-gjt"/>
+                <constraint firstItem="bpq-HL-hvY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="zfW-BN-vpr"/>
+            </constraints>
+            <size key="customSize" width="340" height="286"/>
+            <connections>
+                <outlet property="containerView" destination="bpq-HL-hvY" id="qFB-qE-Qe4"/>
+                <outlet property="priceLabel" destination="6L5-S6-wQ1" id="vvo-lS-E54"/>
+                <outlet property="productImage" destination="CNO-wy-4E6" id="tm2-to-Z2V"/>
+                <outlet property="productNameLabel" destination="flb-1F-3cb" id="lgf-Gg-dYP"/>
+                <outlet property="ratingLabel" destination="qDi-gT-zaK" id="alX-hs-9qs"/>
+            </connections>
+            <point key="canvasLocation" x="347.82608695652175" y="156.02678571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

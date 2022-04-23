@@ -12,6 +12,8 @@ protocol SplashViewControllerInterface: AnyObject {
 }
 
 final class SplashViewController: BaseViewController {
+    @IBOutlet private weak var logoImageView: BaseImageView!
+
     var presenter: SplashPresenterInterface!
 
     override func viewDidLoad() {
