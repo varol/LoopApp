@@ -7,18 +7,12 @@
 
 import Foundation
 
-protocol DetailInteractorInterface: AnyObject {
+protocol DetailInteractorInterface: AnyObject {}
 
-}
-
-protocol DetailInteractorOutputInterface: AnyObject {
-
-}
+protocol DetailInteractorOutputInterface: AnyObject {}
 
 final class DetailInteractor {
     var output: DetailInteractorOutputInterface?
 }
 
-extension DetailInteractor: DetailInteractorInterface {
-
-}
+extension DetailInteractor: DetailInteractorInterface {}

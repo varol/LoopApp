@@ -11,21 +11,23 @@ protocol HomeViewControllerInterface: AnyObject {
     func prepareCollectionView()
     func prepareNavigationBar()
     func reloadData()
+    func showLoadingView()
+    func hideLoadingView()
 }
 
 extension HomeViewController {
     fileprivate enum Constants {
-        static let logoImage: String = "logo"
-        static let navigationTitleImageViewHeroID: String = "logoImage"
-        static let navigationTitleImageViewWidthMultiplierValue: CGFloat = 0.2
-        static let navigationTitleImageViewHeightMultiplierValue: CGFloat = 0.1
+        enum UI {
+            static let fractionalWidth: CGFloat = 1
+            static let estimatedHeight: CGFloat = 44
+            static let groupCount: Int = 2
+            static let heroScaleValue: CGFloat = 0.1
+        }
     }
 }
 
 final class HomeViewController: BaseViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var logoImageView: BaseImageView!
-    lazy private var navigationTitleImageView = UIImageView()
 
     var presenter: HomePresenterInterface!
 
@@ -42,7 +44,7 @@ final class HomeViewController: BaseViewController {
 
 extension HomeViewController: HomeViewControllerInterface {
     func prepareCollectionView() {
-        collectionView.hero.modifiers = [.cascade]
+        collectionView.hero.modifiers = [.fade]
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -52,24 +54,7 @@ extension HomeViewController: HomeViewControllerInterface {
     }
 
     func prepareNavigationBar() {
-        navigationTitleImageView.image = UIImage(named: Constants.logoImage)
-        navigationTitleImageView.contentMode = .scaleAspectFit
-        navigationTitleImageView.heroID = Constants.navigationTitleImageViewHeroID
-        navigationTitleImageView.translatesAutoresizingMaskIntoConstraints = false
-
-        if let navigationController = navigationController {
-            navigationController.backgroundColor(.white)
-            navigationController.navigationBar.addSubview(navigationTitleImageView)
-
-            NSLayoutConstraint.activate([
-                navigationTitleImageView.centerXAnchor.constraint(equalTo: navigationController.navigationBar.centerXAnchor),
-                navigationTitleImageView.centerYAnchor.constraint(equalTo: navigationController.navigationBar.centerYAnchor),
-                navigationTitleImageView.widthAnchor.constraint(equalTo: navigationController.navigationBar.widthAnchor,
-                                                                multiplier: Constants.navigationTitleImageViewWidthMultiplierValue),
-                navigationTitleImageView.heightAnchor.constraint(equalTo: navigationController.navigationBar.widthAnchor,
-                                                                 multiplier: Constants.navigationTitleImageViewHeightMultiplierValue)
-            ])
-        }
+        prepareNavigationBarItems()
     }
 
     func reloadData() {
@@ -78,14 +63,14 @@ extension HomeViewController: HomeViewControllerInterface {
 
     func handleLayout() {
         let size = NSCollectionLayoutSize(
-            widthDimension: NSCollectionLayoutDimension.fractionalWidth(1),
-            heightDimension: NSCollectionLayoutDimension.estimated(44)
+            widthDimension: NSCollectionLayoutDimension.fractionalWidth(Constants.UI.fractionalWidth),
+            heightDimension: NSCollectionLayoutDimension.estimated(Constants.UI.estimatedHeight)
         )
 
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size,
                                                        subitem: item,
-                                                       count: 1)
+                                                       count: Constants.UI.groupCount)
 
         let section = NSCollectionLayoutSection(group: group)
 
@@ -93,6 +78,13 @@ extension HomeViewController: HomeViewControllerInterface {
         collectionView.collectionViewLayout = layout
     }
 
+    func showLoadingView() {
+        showLoading()
+    }
+
+    func hideLoadingView() {
+        hideLoading()
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
@@ -117,7 +109,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.presenter = ProductCollectionViewCellPresenter(view: cell,
                                                                 product: product,
                                                                 delegate: self)
-            cell.hero.modifiers = [.fade, .scale(0.1)]
+            cell.hero.modifiers = [.fade, .scale(Constants.UI.heroScaleValue)]
         }
 
         return cell

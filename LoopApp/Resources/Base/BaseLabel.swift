@@ -11,11 +11,7 @@ class BaseLabel: UILabel {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
-        configureLabel()
         configureFont()
-    }
-
-    func configureLabel() {
     }
 
     func configureFont() {

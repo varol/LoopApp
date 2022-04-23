@@ -11,17 +11,49 @@ protocol DetailViewControllerInterface: AnyObject {
     func prepareCollectionView()
     func preparePageControl()
     func reloadData()
+    func setProductName(_ text: String)
+    func setProductDescription(_ text: String)
+    func setProductPrice(_ text: String)
+    func setProductRating(_ text: String)
+    func setProductStock(_ text: String)
+    func setProductBrand(_ text: String)
+    func setProductCategory(_ text: String)
+}
+
+extension DetailViewController {
+    fileprivate enum Constants {
+        enum Logic {
+            static let minimumImageValue: Int = 2
+        }
+
+        enum UI {
+            static let cellHeight: CGFloat = 200
+            static let heroScaleValue: CGFloat = 0.1
+        }
+    }
 }
 
 final class DetailViewController: BaseViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var productNameLabel: BaseLabel!
+    @IBOutlet private weak var productDescriptionLabel: BaseLabel!
+    @IBOutlet private weak var priceLabel: BaseLabel!
+    @IBOutlet private weak var ratingLabel: BaseLabel!
+    @IBOutlet private weak var stockLabel: BaseLabel!
+    @IBOutlet private weak var brandLabel: BaseLabel!
+    @IBOutlet private weak var categoryLabel: BaseLabel!
+
     var presenter: DetailPresenterInterface!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
         self.hero.isEnabled = true
+    }
+
+    @IBAction private func addBasketButtonTapped() {
+        presenter.addBasketButtonTapped()
     }
 }
 
@@ -37,6 +69,7 @@ extension DetailViewController: DetailViewControllerInterface {
     }
 
     func preparePageControl() {
+        pageControl.isHidden = presenter.getImageCount() < Constants.Logic.minimumImageValue
         pageControl.numberOfPages = presenter.getImageCount()
     }
 
@@ -50,6 +83,33 @@ extension DetailViewController: DetailViewControllerInterface {
         self.collectionView.reloadData()
     }
 
+    func setProductName(_ text: String) {
+        productNameLabel.text = text
+    }
+
+    func setProductDescription(_ text: String) {
+        productDescriptionLabel.text = text
+    }
+
+    func setProductPrice(_ text: String) {
+        priceLabel.text = text
+    }
+
+    func setProductRating(_ text: String) {
+        ratingLabel.text = text
+    }
+
+    func setProductStock(_ text: String) {
+        stockLabel.text = text
+    }
+
+    func setProductBrand(_ text: String) {
+        brandLabel.text = text
+    }
+
+    func setProductCategory(_ text: String) {
+        categoryLabel.text = text
+    }
 }
 
 extension DetailViewController: UICollectionViewDelegate {
@@ -59,7 +119,7 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200)
+        return CGSize(width: collectionView.frame.width, height: Constants.UI.cellHeight)
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -88,7 +148,7 @@ extension DetailViewController: UICollectionViewDataSource {
 
         cell.hero.isEnabled = true
         cell.productImageView.heroID = presenter.getProductName()
-        cell.hero.modifiers = [.fade, .scale(0.1)]
+        cell.hero.modifiers = [.fade, .scale(Constants.UI.heroScaleValue)]
 
         if let image = presenter.getImage(with: indexPath.row) {
             cell.configure(with: image)

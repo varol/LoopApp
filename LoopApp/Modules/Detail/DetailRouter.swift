@@ -38,8 +38,6 @@ class DetailRouter: NSObject {
 }
 
 extension DetailRouter: DetailRouterInterface {
-    func navigate(_ route: DetailRoutes) {
-        
-    }
+    func navigate(_ route: DetailRoutes) {}
 }
 

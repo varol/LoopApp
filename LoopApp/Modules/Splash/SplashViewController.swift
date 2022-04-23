@@ -18,6 +18,9 @@ final class SplashViewController: BaseViewController {
 
     override func viewDidLoad() {
         presenter.viewDidLoad()
+        logoImageView.hero.isEnabled = true
+        logoImageView.heroID = "logoImage"
+        logoImageView.hero.modifiers = [.fade, .scale(0.5)]
     }
 }
 
