@@ -8,7 +8,8 @@
 import UIKit
 
 protocol SplashViewControllerInterface: AnyObject {
-
+    func prepareLogoImageView()
+    func prepareNavigationBar()
 }
 
 final class SplashViewController: BaseViewController {
@@ -18,12 +19,17 @@ final class SplashViewController: BaseViewController {
 
     override func viewDidLoad() {
         presenter.viewDidLoad()
-        logoImageView.hero.isEnabled = true
-        logoImageView.heroID = "logoImage"
-        logoImageView.hero.modifiers = [.fade, .scale(0.5)]
     }
 }
 
 extension SplashViewController: SplashViewControllerInterface {
+    func prepareLogoImageView() {
+        logoImageView.hero.isEnabled = true
+        logoImageView.heroID = "logoImage"
+        logoImageView.hero.modifiers = [.fade, .scale(0.5)]
+    }
 
+    func prepareNavigationBar() {
+        navigationController?.backgroundColor(.white)
+    }
 }

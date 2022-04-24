@@ -259,7 +259,7 @@
 			children = (
 				E4864B4C280F1E1B008B8A89 /* App */,
 				E4864B2C280F1E12008B8A89 /* Resources */,
-				E4864B2A280F1E12008B8A89 /* Rest */,
+				E4864B2A280F1E12008B8A89 /* Endpoints */,
 				E4864B11280F1DFF008B8A89 /* Modules */,
 				E4864AE8280F1D52008B8A89 /* Assets.xcassets */,
 				E4864AEA280F1D52008B8A89 /* LaunchScreen.storyboard */,
@@ -331,12 +331,12 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		E4864B2A280F1E12008B8A89 /* Rest */ = {
+		E4864B2A280F1E12008B8A89 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
 				E4864B2B280F1E12008B8A89 /* HomeEndpointItem.swift */,
 			);
-			path = Rest;
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		E4864B2C280F1E12008B8A89 /* Resources */ = {
@@ -825,6 +825,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -852,6 +853,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
