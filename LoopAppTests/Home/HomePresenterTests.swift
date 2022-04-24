@@ -8,7 +8,7 @@
 import XCTest
 @testable import LoopApp
 
-class HomePresenterTests: XCTestCase {
+final class HomePresenterTests: XCTestCase {
     var presenter: HomePresenter!
     var view: MockHomeViewController!
     var interactor: MockHomeInteractor!
