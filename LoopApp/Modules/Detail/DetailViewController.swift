@@ -146,14 +146,15 @@ extension DetailViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeCell(cellType: SliderCollectionViewCell.self,
                                             indexPath: indexPath)
 
-        cell.hero.isEnabled = true
-        cell.productImageView.heroID = presenter.getProductName()
-        cell.hero.modifiers = [.fade, .scale(Constants.UI.heroScaleValue)]
 
         if let image = presenter.getImage(with: indexPath.row) {
-            cell.configure(with: image)
+            cell.presenter = SliderCollectionViewCellPresenter(view: cell, image: image)
+            cell.hero.isEnabled = true
+            cell.productImageView.heroID = presenter.getProductName()
+            cell.hero.modifiers = [.fade, .scale(Constants.UI.heroScaleValue)]
         }
 
+        
         return cell
     }
 

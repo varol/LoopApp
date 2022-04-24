@@ -16,6 +16,7 @@
 		E4150FD028135CDD005EA307 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E4150FCF28135CDD005EA307 /* Kingfisher */; };
 		E46C80882814B2EC000C4430 /* TopBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C80862814B2EC000C4430 /* TopBasketView.swift */; };
 		E46C80892814B2EC000C4430 /* TopBasketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E46C80872814B2EC000C4430 /* TopBasketView.xib */; };
+		E46C808B2814C88A000C4430 /* SliderCollectionViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C808A2814C88A000C4430 /* SliderCollectionViewCellPresenter.swift */; };
 		E4864AE0280F1D51008B8A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4864ADF280F1D51008B8A89 /* AppDelegate.swift */; };
 		E4864AE2280F1D51008B8A89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4864AE1280F1D51008B8A89 /* SceneDelegate.swift */; };
 		E4864AE9280F1D52008B8A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4864AE8280F1D52008B8A89 /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		E409B3192814664A000751FE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		E46C80862814B2EC000C4430 /* TopBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBasketView.swift; sourceTree = "<group>"; };
 		E46C80872814B2EC000C4430 /* TopBasketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopBasketView.xib; sourceTree = "<group>"; };
+		E46C808A2814C88A000C4430 /* SliderCollectionViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCellPresenter.swift; sourceTree = "<group>"; };
 		E4864ADC280F1D51008B8A89 /* LoopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4864ADF280F1D51008B8A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4864AE1280F1D51008B8A89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,10 +218,10 @@
 		E4864ADE280F1D51008B8A89 /* LoopApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4864B4C280F1E1B008B8A89 /* App */,
 				E4864B2C280F1E12008B8A89 /* Resources */,
 				E4864B2A280F1E12008B8A89 /* Rest */,
 				E4864B11280F1DFF008B8A89 /* Modules */,
-				E4864B4C280F1E1B008B8A89 /* App */,
 				E4864AE8280F1D52008B8A89 /* Assets.xcassets */,
 				E4864AEA280F1D52008B8A89 /* LaunchScreen.storyboard */,
 				E4864AED280F1D52008B8A89 /* Info.plist */,
@@ -412,6 +414,7 @@
 			children = (
 				E4864B8C2813485E008B8A89 /* SliderCollectionViewCell.swift */,
 				E4864B8D2813485E008B8A89 /* SliderCollectionViewCell.xib */,
+				E46C808A2814C88A000C4430 /* SliderCollectionViewCellPresenter.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				E4864B49280F1E12008B8A89 /* BaseViewController.swift in Sources */,
 				E4864B26280F1DFF008B8A89 /* SplashPresenter.swift in Sources */,
 				E4864B46280F1E12008B8A89 /* Routerable.swift in Sources */,
+				E46C808B2814C88A000C4430 /* SliderCollectionViewCellPresenter.swift in Sources */,
 				E4864B43280F1E12008B8A89 /* UINavigationController+Extensions.swift in Sources */,
 				E4864B47280F1E12008B8A89 /* Viewable.swift in Sources */,
 				E409B311281420B5000751FE /* BaseView.swift in Sources */,
