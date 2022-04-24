@@ -12,7 +12,7 @@ protocol DetailRouterInterface: AnyObject {
 }
 
 enum DetailRoutes {
-    
+    case basket
 }
 
 class DetailRouter: NSObject {

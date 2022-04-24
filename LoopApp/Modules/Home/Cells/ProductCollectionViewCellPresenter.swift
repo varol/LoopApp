@@ -36,8 +36,6 @@ final class ProductCollectionViewCellPresenter {
         self.product = product
         self.delegate = delegate
     }
-
-
 }
 
 extension ProductCollectionViewCellPresenter : ProductCollectionViewCellPresenterInterface {

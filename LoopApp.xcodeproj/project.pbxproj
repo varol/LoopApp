@@ -67,6 +67,10 @@
 		E4864B8A28133EA6008B8A89 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4864B8828133EA6008B8A89 /* DetailViewController.xib */; };
 		E4864B8E2813485E008B8A89 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4864B8C2813485E008B8A89 /* SliderCollectionViewCell.swift */; };
 		E4864B8F2813485E008B8A89 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4864B8D2813485E008B8A89 /* SliderCollectionViewCell.xib */; };
+		E4E4EB6928156B7900A6FAF1 /* MockDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6828156B7900A6FAF1 /* MockDetailInteractor.swift */; };
+		E4E4EB6B28156B8400A6FAF1 /* MockDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6A28156B8400A6FAF1 /* MockDetailRouter.swift */; };
+		E4E4EB6D28156B9300A6FAF1 /* MockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6C28156B9300A6FAF1 /* MockDetailViewController.swift */; };
+		E4E4EB6F28156BAD00A6FAF1 /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6E28156BAD00A6FAF1 /* DetailPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +166,10 @@
 		E4864B8828133EA6008B8A89 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		E4864B8C2813485E008B8A89 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4864B8D2813485E008B8A89 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		E4E4EB6828156B7900A6FAF1 /* MockDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailInteractor.swift; sourceTree = "<group>"; };
+		E4E4EB6A28156B8400A6FAF1 /* MockDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailRouter.swift; sourceTree = "<group>"; };
+		E4E4EB6C28156B9300A6FAF1 /* MockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailViewController.swift; sourceTree = "<group>"; };
+		E4E4EB6E28156BAD00A6FAF1 /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +279,7 @@
 		E4864AF5280F1D52008B8A89 /* LoopAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E4E4EB6728156B5500A6FAF1 /* Detail */,
 				E46C808C2814CB6C000C4430 /* Home */,
 				E4864AF6280F1D52008B8A89 /* LoopAppTests.swift */,
 			);
@@ -429,9 +438,9 @@
 		E4864B79281333ED008B8A89 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E409B315281429E8000751FE /* ProductCollectionViewCellPresenter.swift */,
 				E4864B7A28133415008B8A89 /* ProductCollectionViewCell.swift */,
 				E4864B7B28133415008B8A89 /* ProductCollectionViewCell.xib */,
-				E409B315281429E8000751FE /* ProductCollectionViewCellPresenter.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -457,6 +466,25 @@
 				E46C808A2814C88A000C4430 /* SliderCollectionViewCellPresenter.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E4E4EB6728156B5500A6FAF1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E4E4EB702815730000A6FAF1 /* SliderCollectionViewCellPresenterTests */,
+				E4E4EB6E28156BAD00A6FAF1 /* DetailPresenterTests.swift */,
+				E4E4EB6828156B7900A6FAF1 /* MockDetailInteractor.swift */,
+				E4E4EB6A28156B8400A6FAF1 /* MockDetailRouter.swift */,
+				E4E4EB6C28156B9300A6FAF1 /* MockDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E4E4EB702815730000A6FAF1 /* SliderCollectionViewCellPresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SliderCollectionViewCellPresenterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -653,10 +681,14 @@
 				E46C809B28155A54000C4430 /* MockProductCollectionViewCell.swift in Sources */,
 				E4864AF7280F1D52008B8A89 /* LoopAppTests.swift in Sources */,
 				E46C808E2814CB8F000C4430 /* HomePresenterTests.swift in Sources */,
+				E4E4EB6F28156BAD00A6FAF1 /* DetailPresenterTests.swift in Sources */,
 				E46C809D28155AEB000C4430 /* MockProductCollectionViewCellDelegate.swift in Sources */,
 				E46C8099281559F6000C4430 /* ProductCollectionViewCellPresenterTests.swift in Sources */,
+				E4E4EB6B28156B8400A6FAF1 /* MockDetailRouter.swift in Sources */,
+				E4E4EB6928156B7900A6FAF1 /* MockDetailInteractor.swift in Sources */,
 				E46C80902814CBAC000C4430 /* MockHomeInteractor.swift in Sources */,
 				E46C809228155393000C4430 /* MockHomeRouter.swift in Sources */,
+				E4E4EB6D28156B9300A6FAF1 /* MockDetailViewController.swift in Sources */,
 				E46C8094281553D1000C4430 /* MockHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
