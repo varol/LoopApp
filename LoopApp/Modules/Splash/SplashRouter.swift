@@ -30,7 +30,6 @@ class SplashRouter: NSObject {
         let presenter = SplashPresenter(interactor: interactor, router: router, view: view)
         view.presenter = presenter
         interactor.output = presenter
-        view.title = "Splash"
         return view
     }
 }
@@ -41,6 +40,10 @@ extension SplashRouter: SplashRouterInterface {
         case .home:
             guard let navigationController = navigationController else { return }
             let homeVC = HomeRouter.setupModule(navigationController: navigationController)
+            homeVC.title = ""
+            homeVC.hero.isEnabled = true
+            navigationController.hero.isEnabled = true
+            navigationController.heroNavigationAnimationType = .none
             navigationController.setRootViewController(homeVC, animated: false)
         }
     }

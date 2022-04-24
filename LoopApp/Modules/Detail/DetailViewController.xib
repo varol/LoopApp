@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="LoopApp" customModuleProvider="target">
+            <connections>
+                <outlet property="brandLabel" destination="2Sj-k5-DaD" id="632-QX-MuW"/>
+                <outlet property="categoryLabel" destination="riF-2G-Ney" id="pvg-50-Pbm"/>
+                <outlet property="collectionView" destination="PGz-CU-f1c" id="yHW-Hs-8Pd"/>
+                <outlet property="pageControl" destination="Jn1-Tq-kgs" id="M2U-qu-HVY"/>
+                <outlet property="priceLabel" destination="KHn-B1-4Zw" id="jZT-F7-Vrm"/>
+                <outlet property="productDescriptionLabel" destination="M4r-dK-nIW" id="ocA-le-PS7"/>
+                <outlet property="productNameLabel" destination="Ov2-mW-t6I" id="5ak-IY-EJo"/>
+                <outlet property="ratingLabel" destination="reE-4U-xKH" id="bmf-i1-So7"/>
+                <outlet property="stockLabel" destination="Ijc-G1-arN" id="Ubd-ct-Rtw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-CU-f1c">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="SW9-4J-cSQ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bn4-cY-t5U">
+                        <size key="itemSize" width="128" height="400"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Tq-kgs">
+                    <rect key="frame" x="149.5" y="204" width="115.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="xaY-B9-QEi"/>
+                    </constraints>
+                    <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                </pageControl>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O2q-cf-kwp">
+                    <rect key="frame" x="16" y="260" width="382" height="602"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov2-mW-t6I" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4r-dK-nIW" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="31.5" width="382" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npE-KH-Zbr" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="36.5" width="382" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Jcu-Sj-6Ob"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W4Q-dv-kFd">
+                            <rect key="frame" x="0.0" y="61.5" width="382" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-mc-Jzx" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reE-4U-xKH" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="191" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-o9-kD6" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="87" width="382" height="1"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="0.35036670920000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="xti-0U-4NE"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wRF-Lf-YQ1">
+                            <rect key="frame" x="0.0" y="93" width="382" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu8-NS-vos" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-G1-arN" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="191" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCo-8y-LEh" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="118.5" width="382" height="1"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="0.35036670920000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="68O-Oz-LNx"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6dl-W2-kkw">
+                            <rect key="frame" x="0.0" y="124.5" width="382" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-H8-ROi" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sj-k5-DaD" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="191" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iU-Pd-9vo" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="150" width="382" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="0.35036670918367346" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="MOw-AD-vZD"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rKp-qn-ibE">
+                            <rect key="frame" x="0.0" y="156" width="382" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEw-RW-4hN" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riF-2G-Ney" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="191" y="0.0" width="191" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="rXy-1f-Pv5" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="181.5" width="382" height="334.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Uzl-DK-BdH">
+                            <rect key="frame" x="0.0" y="521" width="382" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHn-B1-4Zw" customClass="BaseLabel" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="66.5" height="60"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0U-Nh-pom" customClass="BaseButton" customModule="LoopApp" customModuleProvider="target">
+                                    <rect key="frame" x="106.5" y="0.0" width="275.5" height="60"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="ADD BASKET">
+                                        <color key="titleColor" red="0.90294627029999996" green="0.90711466399999996" blue="0.91961984539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="addBasketButtonTapped" destination="-1" eventType="touchUpInside" id="Qcm-dk-Nqs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="KSX-HC-8lb"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-0W-FZq" customClass="BaseView" customModule="LoopApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="586" width="382" height="16"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="7XT-Ao-5NR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O2q-cf-kwp" secondAttribute="bottom" id="8XA-kl-n4m"/>
+                <constraint firstItem="PGz-CU-f1c" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E5F-lP-N78"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PGz-CU-f1c" secondAttribute="trailing" id="KEq-VA-fTq"/>
+                <constraint firstItem="O2q-cf-kwp" firstAttribute="top" secondItem="PGz-CU-f1c" secondAttribute="bottom" constant="16" id="NEL-p5-OcK"/>
+                <constraint firstItem="PGz-CU-f1c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tvl-mu-RSu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O2q-cf-kwp" secondAttribute="trailing" constant="16" id="WJr-ij-ATo"/>
+                <constraint firstItem="Jn1-Tq-kgs" firstAttribute="bottom" secondItem="PGz-CU-f1c" secondAttribute="bottom" id="dtG-4a-CcT"/>
+                <constraint firstItem="Jn1-Tq-kgs" firstAttribute="centerX" secondItem="PGz-CU-f1c" secondAttribute="centerX" id="udD-93-ndp"/>
+                <constraint firstItem="O2q-cf-kwp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="y5Z-k9-WYF"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

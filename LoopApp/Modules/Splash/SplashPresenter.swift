@@ -27,6 +27,8 @@ final class SplashPresenter: SplashPresenterInterface {
     }
 
     func viewDidLoad() {
+        view.prepareLogoImageView()
+        view.prepareNavigationBar()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.router.navigate(.home)
         }

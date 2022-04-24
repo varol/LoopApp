@@ -12,7 +12,7 @@ protocol HomeRouterInterface: AnyObject {
 }
 
 enum HomeRoutes {
-    
+    case detail(product: Product)
 }
 
 class HomeRouter: NSObject {
@@ -30,14 +30,18 @@ class HomeRouter: NSObject {
         let presenter = HomePresenter(interactor: interactor, router: router, view: view)
         view.presenter = presenter
         interactor.output = presenter
-        view.title = "Home"
         return view
     }
 }
 
 extension HomeRouter: HomeRouterInterface {
     func navigate(_ route: HomeRoutes) {
-        
+        switch route {
+        case .detail(let product):
+            let detailVC = DetailRouter.setupModule(product: product)
+            detailVC.hero.isEnabled = true
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }
 
