@@ -71,6 +71,8 @@
 		E4E4EB6B28156B8400A6FAF1 /* MockDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6A28156B8400A6FAF1 /* MockDetailRouter.swift */; };
 		E4E4EB6D28156B9300A6FAF1 /* MockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6C28156B9300A6FAF1 /* MockDetailViewController.swift */; };
 		E4E4EB6F28156BAD00A6FAF1 /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB6E28156BAD00A6FAF1 /* DetailPresenterTests.swift */; };
+		E4E4EB722815736600A6FAF1 /* MockSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB712815736600A6FAF1 /* MockSliderCollectionViewCell.swift */; };
+		E4E4EB742815739900A6FAF1 /* SliderCollectionViewCellPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4EB732815739900A6FAF1 /* SliderCollectionViewCellPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		E4E4EB6A28156B8400A6FAF1 /* MockDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailRouter.swift; sourceTree = "<group>"; };
 		E4E4EB6C28156B9300A6FAF1 /* MockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailViewController.swift; sourceTree = "<group>"; };
 		E4E4EB6E28156BAD00A6FAF1 /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
+		E4E4EB712815736600A6FAF1 /* MockSliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4E4EB732815739900A6FAF1 /* SliderCollectionViewCellPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCellPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +487,8 @@
 		E4E4EB702815730000A6FAF1 /* SliderCollectionViewCellPresenterTests */ = {
 			isa = PBXGroup;
 			children = (
+				E4E4EB732815739900A6FAF1 /* SliderCollectionViewCellPresenterTests.swift */,
+				E4E4EB712815736600A6FAF1 /* MockSliderCollectionViewCell.swift */,
 			);
 			path = SliderCollectionViewCellPresenterTests;
 			sourceTree = "<group>";
@@ -682,9 +688,11 @@
 				E4864AF7280F1D52008B8A89 /* LoopAppTests.swift in Sources */,
 				E46C808E2814CB8F000C4430 /* HomePresenterTests.swift in Sources */,
 				E4E4EB6F28156BAD00A6FAF1 /* DetailPresenterTests.swift in Sources */,
+				E4E4EB742815739900A6FAF1 /* SliderCollectionViewCellPresenterTests.swift in Sources */,
 				E46C809D28155AEB000C4430 /* MockProductCollectionViewCellDelegate.swift in Sources */,
 				E46C8099281559F6000C4430 /* ProductCollectionViewCellPresenterTests.swift in Sources */,
 				E4E4EB6B28156B8400A6FAF1 /* MockDetailRouter.swift in Sources */,
+				E4E4EB722815736600A6FAF1 /* MockSliderCollectionViewCell.swift in Sources */,
 				E4E4EB6928156B7900A6FAF1 /* MockDetailInteractor.swift in Sources */,
 				E46C80902814CBAC000C4430 /* MockHomeInteractor.swift in Sources */,
 				E46C809228155393000C4430 /* MockHomeRouter.swift in Sources */,
