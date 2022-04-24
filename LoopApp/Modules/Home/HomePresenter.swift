@@ -41,11 +41,11 @@ final class HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
         view.prepareNavigationBar()
         view.showLoadingView()
+        view.prepareCollectionView()
         interactor.fetchProducts()
     }
 
     func viewWillAppear() {
-        view.prepareCollectionView()
     }
 
     func getProductsCount() -> Int {
@@ -70,9 +70,9 @@ extension HomePresenter: HomeInteractorOutputInterface {
         switch result {
         case .success(let response):
             self.products = response.products
+            view.hideLoadingView()
         case .failure(let error):
             debugPrint(error.message)
         }
-        view.hideLoadingView()
     }
 }
