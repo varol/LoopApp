@@ -50,6 +50,7 @@ final class DetailViewController: BaseViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
         self.hero.isEnabled = true
+        self.view.hero.modifiers = [.fade]
     }
 
     @IBAction private func addBasketButtonTapped() {
@@ -150,11 +151,12 @@ extension DetailViewController: UICollectionViewDataSource {
         if let image = presenter.getImage(with: indexPath.row) {
             cell.presenter = SliderCollectionViewCellPresenter(view: cell, image: image)
             cell.hero.isEnabled = true
-            cell.productImageView.heroID = presenter.getProductName()
+            if indexPath.row == .zero {
+                cell.productImageView.heroID = presenter.getProductName()
+            }
             cell.hero.modifiers = [.fade, .scale(Constants.UI.heroScaleValue)]
         }
 
-        
         return cell
     }
 
